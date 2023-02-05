@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@/theme/theme";
 import { Inter } from "@next/font/google";
-import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"], weight: "400" });
 
@@ -23,7 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ChakraProvider theme={theme}>
-        <Header />
         <Box paddingTop="102px">
           <Component {...pageProps} />
         </Box>
