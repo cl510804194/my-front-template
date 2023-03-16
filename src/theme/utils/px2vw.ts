@@ -6,12 +6,12 @@ export default function px2vw(
 ): string {
   if (!ignoreMax) {
     if (px > unit) {
-      return '100vw';
+      return "100vw";
     } else if (px < -1 * unit) {
-      return '-100vw';
+      return "-100vw";
     }
   }
 
   // 100vw = ${unit}px
-  return `${(px / unit) * 100}${ignoreUnit ? '' : 'vw'}`;
+  return `${(px / unit) * 100}${ignoreUnit ? "" : "vw"}`;
 }
